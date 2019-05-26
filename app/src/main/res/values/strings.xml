@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Pasabordos</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Usuario</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">lOGIN</string>
+    <string name="action_sign_in_short">Dato erroneo</string>
+    <string name="mensaje_permiso">Considere aceptar los permisos</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="conceder">Conceder</string>
+    <string name="conceder_permiso">Es necesario conceder permiso</string>
+    <string name="permiso_necesario">Permiso necesario</string>
+    <string name="conectarse">Conectarse</string>
+    <string name="bienvenido">¡Bienvenido!</string>
+    <string name="usuario_contra_vacio">Por favor ingrese un usuario y contraseña</string>
+    <string name="usuario_contrasena_errado">El usuario y contraseña incorrectos</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="action_settings">Cerrar sesión</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="escanear">Escanear</string>
+    <string name="gcm_defaultSenderId">336163349411</string>
+    <string name="soporte">Soporte</string>
+    <string name="politicauso">Politica de Uso</string>
+</resources>

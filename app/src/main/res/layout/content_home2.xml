@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedor_principal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.sostrackapp.Ui.Main"
+    tools:showIn="@layout/app_bar_home2">
+
+    <RelativeLayout
+        android:id="@+id/layoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:layout_width="@dimen/boton_escanerar"
+            android:layout_height="@dimen/boton_escanerar"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_boton_de_lectura"
+            android:onClick="LeerCodigo" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/layoutAlerta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtTitleResultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="RESULTADO DE LA LECTURA"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/txttitulo"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgTicket"
+            android:layout_width="500dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/txtTitleResultado"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/ic_boarding_pass" />
+
+        <LinearLayout
+            android:id="@+id/rlinfovuelo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgTicket"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--<LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/vuelo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="45dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="VUELO:"
+                    android:textSize="@dimen/txtestado"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/hora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/vuelo"
+                    android:layout_marginRight="48dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="HORA: "
+                    android:textSize="@dimen/txtestado"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/terminal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hora"
+                    android:layout_marginRight="18dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="TERMINAL: "
+                    android:textSize="@dimen/txtestado"
+                    android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>-->
+
+           <LinearLayout
+               android:visibility="gone"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <TextView
+                   android:id="@+id/estadovuelo"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginRight="11dp"
+                   android:layout_toRightOf="@id/vuelo"
+                   android:text="Incorrecto"
+                   android:textSize="@dimen/txtestado"
+                   android:textColor="@android:color/holo_green_light" />
+
+               <TextView
+                   android:id="@+id/estadohora"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/estadovuelo"
+                   android:layout_marginRight="20dp"
+                   android:layout_toRightOf="@+id/hora"
+                   android:text="Correcto"
+                   android:textSize="@dimen/txtestado"
+                   android:textColor="@android:color/holo_green_light" />
+
+               <TextView
+                   android:id="@+id/estadoterminal"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/estadohora"
+                   android:layout_marginRight="20dp"
+                   android:layout_toRightOf="@+id/terminal"
+                   android:text="Correcto"
+                   android:textSize="@dimen/txtestado"
+                   android:textColor="@android:color/holo_green_light" />
+
+           </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="@dimen/activity_horizontal_margin">
+                <ImageView
+                    android:id="@+id/iconovuelo"
+                    android:layout_width="@dimen/img"
+                    android:layout_height="@dimen/img"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@+id/estadovuelo"
+                    android:background="@drawable/ic_correcto" />
+
+                <ImageView
+                    android:id="@+id/iconohora"
+                    android:layout_width="@dimen/img"
+                    android:layout_height="@dimen/img"
+                    android:layout_below="@+id/iconovuelo"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@+id/estadohora"
+                    android:background="@drawable/ic_correcto" />
+
+                <ImageView
+                    android:id="@+id/iconoterminal"
+                    android:layout_width="@dimen/img"
+                    android:layout_height="@dimen/img"
+                    android:layout_below="@+id/iconohora"
+                    android:layout_toRightOf="@+id/estadoterminal"
+                    android:background="@drawable/ic_correcto" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/vuelo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="45dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="VUELO"
+                    android:textSize="@dimen/txtestado"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/hora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/vuelo"
+                    android:layout_marginRight="48dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="HORA"
+                    android:textSize="@dimen/txtestado"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/terminal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hora"
+                    android:layout_marginRight="18dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="TERMINAL"
+                    android:textSize="@dimen/txtestado"
+                    android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlinfovuelo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Bienvenido(a) Que tenga un buen viaje"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="@dimen/txtresultado" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

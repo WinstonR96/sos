@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00ADEE</color>
+    <color name="colorPrimaryDark">#00aeff</color>
+    <color name="colorAccent">#848484</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="azulclaro">#84d5f4</color>
+    <color name="grisoscuro">#333333</color>
+    <color name="white">#ffffff</color>
+    <color name="respaldo">#848484</color>
+</resources>

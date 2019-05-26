@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/supervisor">
+
+        <!--   <item
+           android:id="@+id/calendario"
+           android:icon="@drawable/peligro"
+           android:title="@string/calendario"/>
+       <item
+            android:id="@+id/requerimiento"
+            android:icon="@drawalistadosntos"
+            android:title="@string/requerimiento"/>
+         <item
+             android:id="@+id/visitas_clinete"
+             android:icon="@drawable/add"
+             android:title="@string/agendar_visita"/>-->
+        <!-- <item
+             android:id="@+id/comunicarte"
+             android:icon="@drawable/microfono"
+             android:title="Comunicación"/>
+       <item
+           android:id="@+id/scan_Qr"
+           android:icon="@drawable/codigo"
+           android:title="Gerencia operativa"/>-->
+
+        <item
+            android:id="@+id/escanear"
+            android:title="@string/escanear"
+            android:icon="@drawable/codigo"/>
+
+        <item
+            android:id="@+id/soporte"
+            android:title="@string/soporte"
+            android:icon="@drawable/ic_soporte"/>
+
+        <item
+            android:id="@+id/politica_de_uso"
+            android:title="@string/politicauso"
+            android:icon="@drawable/ic_politica_de_uso"/>
+
+
+        <item
+            android:id="@+id/cerrar"
+            android:icon="@drawable/cerrar_sesion"
+            android:title="Cerrar sesión"/>
+    </group>
+
+</menu>
